@@ -3,7 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/login.css">
+    <title>Login</title>
   </head>
-  <body></body>
+  <body>
+
+    <main>
+      <form action="" id="login">
+        <div id="header">
+          <h1>Faça login na sua conta</h1>
+        </div>
+        <div id="inputs">
+          <div class="caixa">
+            <!-- <label for="email" class="label-email"> -->
+              <!-- E-mail: -->
+            <input id="email" type="email" name="email" placeholder="Digite seu melhor email" required>
+            <!-- </label> -->
+          </div>
+
+          <div class="caixa">
+            <!-- <label for="senha"> -->
+              <!-- Senha: -->
+              <input id="senha" type="password" name="senha" placeholder="Crie sua senha"required>
+            <!-- </label> -->
+          </div>
+
+          <!-- <div class="caixa">
+            <label for="senha">
+              Repita:
+              <input id="senha" type="password" name="senha" placeholder="Repita sua senha"required>
+            </label>
+          </div> -->
+        </div>
+
+        <button id="entrar" type="submit">
+          Entrar
+        </button>
+      </form>
+    </main>
+
+    <div class="registro">
+      <h4>Novo por aqui?<a href="./register.html" class=""> Crie sua conta aqui</a></h4>
+    </div>
+  </body>
 </html>

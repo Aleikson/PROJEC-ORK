@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#login {
+    width: 500px;
+    height: 445px;
+    margin: 0 auto;
+    padding: 4.2rem 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    border-radius:  0.3125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#header h1 {
+    font-weight: 400;
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#inputs, .caixa{
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin:15px 0;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#entrar {
+    width: 100%;
+    background: rgba(96, 131, 255, 1);
+    padding: .6rem;
+    border: none;
+    border-radius: .2rem;
+    color: white;
+    font-size: 23px;
+}
+
+.registro {
+    width: 500px;
+    margin-top: 10px;
+    padding: 2rem 3rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    border-radius:  0.3125rem;
+    font-family: 'roboto', sans-serif;
+}
+
+.registro h4 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.registro a {
+    text-decoration: none;
+    color: rgba(96, 131, 255, 1);
+}
+
+
+
+
+  
