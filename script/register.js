@@ -10,33 +10,33 @@
 //     const msgSpan = document.getElementById("nameError");
 
 //     if (name || email || senha || repetir) {
-//       document.getElementById("nameError").textContent =
-//         "Cadastro realizado com sucesso";
-//       return;
-//     } else {
-//       document.getElementById("nameError").textContent = "Todos os campos são obricatórios.";
-//     }
-//   });
-
-//  Ativar e desativar botão //
-
-document.getElementById("name").addEventListener("input", botaoDesabilitado);
-document.getElementById("email").addEventListener("input", botaoDesabilitado);
-document.getElementById("senha").addEventListener("input", botaoDesabilitado);
-document.getElementById("repetir").addEventListener("input", botaoDesabilitado);
-
-
-
-function botaoDesabilitado() {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let senha = document.getElementById("senha").value;
-  let repetir = document.getElementById("repetir").value;
-  let btn = document.getElementById("botao");
-
-  if (name && email && senha && repetir) {
-    // btn.setAttribute("disabled", "true");
-    btn.setAttribute('style', 'background-color:#6083ff')
+  //       document.getElementById("nameError").textContent =
+  //         "Cadastro realizado com sucesso";
+  //       return;
+  //     } else {
+    //       document.getElementById("nameError").textContent = "Todos os campos são obricatórios.";
+    //     }
+    //   });
+    
+    //  Ativar e desativar botão //
+    
+    document.getElementById("name").addEventListener("input", botaoDesabilitado);
+    document.getElementById("email").addEventListener("input", botaoDesabilitado);
+    document.getElementById("senha").addEventListener("input", botaoDesabilitado);
+    document.getElementById("repetir").addEventListener("input", botaoDesabilitado);
+    
+    
+    
+    function botaoDesabilitado() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let senha = document.getElementById("senha").value;
+      let repetir = document.getElementById("repetir").value;
+      let btn = document.getElementById("botao");
+      
+      if (name && email && senha && repetir) {
+        // btn.setAttribute("disabled", "true");
+        btn.setAttribute('style', 'background-color:#6083ff')
     btn.style.cursor = 'pointer'
   } else {
     // btn.removeAttribute("disabled");
@@ -64,6 +64,8 @@ let repetir = document.getElementById('repetir')
 let spanRepetir = document.querySelector('.spanRepetir')
 let validRepetir = false
 
+const validateEmailRegex = /^\S+@\S+\.\S+$/;
+
 
 nome.addEventListener('keyup', () => {
   if (nome.value.length <= 2){
@@ -79,19 +81,6 @@ nome.addEventListener('keyup', () => {
 
 })
 
-email.addEventListener('keyup', () => {
-  if (email.value.length <= 2){
-    email.setAttribute('style', 'border-bottom: 1px solid red'),
-    spanEmail.style.display = "block";
-    validEmail = false
-  } else {
-    email.setAttribute('style', 'border: 1px solid green')
-    spanEmail.style.display = "none";
-    email.setAttribute('style', 'border-color: green')
-    validEmail = true
-  }
-
-})
 
 senha.addEventListener('keyup', () => {
   if (senha.value.length < 6){
@@ -127,6 +116,21 @@ function cadastrar(){
   if (validNome && validEmail && validSenha && validRepetir){
     alert('Show! seu cadastro foi feito parceiro.')
   }
+}
+
+// Validação email do cadastro (Junior) //
+
+
+function emailValidate(){
+  if (validateEmailRegex.test(email.value)){
+    email.setAttribute('style', 'border: 1px solid green')
+    spanEmail.style.display = "none";
+    email.setAttribute('style', 'border-color: green')
+  } else {
+    email.setAttribute('style', 'border-bottom: 1px solid red'),
+    spanEmail.style.display = "block";
+  }
+
 }
 
 
